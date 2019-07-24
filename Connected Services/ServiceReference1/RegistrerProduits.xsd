@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.adame.com/" targetNamespace="http://ws.adame.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="augmenterQte" type="tns:augmenterQte" />
+  <xs:element name="augmenterQteResponse" type="tns:augmenterQteResponse" />
+  <xs:element name="getAllProduits" type="tns:getAllProduits" />
+  <xs:element name="getAllProduitsResponse" type="tns:getAllProduitsResponse" />
+  <xs:element name="getListProduits" type="tns:getListProduits" />
+  <xs:element name="getListProduitsResponse" type="tns:getListProduitsResponse" />
+  <xs:element name="insertProduitObjet" type="tns:insertProduitObjet" />
+  <xs:element name="insertProduitObjetResponse" type="tns:insertProduitObjetResponse" />
+  <xs:element name="insertProduitPrimitif" type="tns:insertProduitPrimitif" />
+  <xs:element name="insertProduitPrimitifResponse" type="tns:insertProduitPrimitifResponse" />
+  <xs:element name="modifierQte" type="tns:modifierQte" />
+  <xs:element name="modifierQteResponse" type="tns:modifierQteResponse" />
+  <xs:element name="produit" type="tns:produit" />
+  <xs:complexType name="insertProduitObjet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="produit" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="produit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="prix" type="xs:double" />
+      <xs:element name="qte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProduitObjetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getListProduits">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getListProduitsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifierQte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="qte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modifierQteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProduitPrimitif">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="qte" type="xs:int" />
+      <xs:element name="prix" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProduitPrimitifResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="augmenterQte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="qte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="augmenterQteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllProduits">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllProduitsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

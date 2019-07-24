@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.adame.com/" targetNamespace="http://ws.adame.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getAllProduits" type="tns:getAllProduits" />
+  <xs:element name="getAllProduitsResponse" type="tns:getAllProduitsResponse" />
+  <xs:element name="insertProduitObjet" type="tns:insertProduitObjet" />
+  <xs:element name="insertProduitObjetResponse" type="tns:insertProduitObjetResponse" />
+  <xs:element name="insertProduitPrimitif" type="tns:insertProduitPrimitif" />
+  <xs:element name="insertProduitPrimitifResponse" type="tns:insertProduitPrimitifResponse" />
+  <xs:element name="produit" type="tns:produit" />
+  <xs:element name="updateQte" type="tns:updateQte" />
+  <xs:element name="updateQteResponse" type="tns:updateQteResponse" />
+  <xs:complexType name="insertProduitObjet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="produit" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="produit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="qte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProduitObjetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateQte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="qte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateQteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProduitPrimitif">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="qte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProduitPrimitifResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllProduits">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllProduitsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

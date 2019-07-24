@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WC_SoapGestionProduit2", "WC_SoapGestionProduit2.csproj", "{602F83BF-E9E0-4DED-9B2A-277A323312B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{602F83BF-E9E0-4DED-9B2A-277A323312B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{602F83BF-E9E0-4DED-9B2A-277A323312B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{602F83BF-E9E0-4DED-9B2A-277A323312B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{602F83BF-E9E0-4DED-9B2A-277A323312B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62963C4F-5DC1-49D4-97F8-0B0B9E58D03D}
+	EndGlobalSection
+EndGlobal

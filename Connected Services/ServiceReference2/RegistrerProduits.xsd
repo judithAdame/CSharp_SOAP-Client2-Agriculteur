@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.adame.com/" targetNamespace="http://ws.adame.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertProduitObjet" type="tns:insertProduitObjet" />
+  <xs:element name="insertProduitObjetResponse" type="tns:insertProduitObjetResponse" />
+  <xs:element name="produit" type="tns:produit" />
+  <xs:complexType name="insertProduitObjet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="produit" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="produit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="prix" type="xs:double" />
+      <xs:element name="qte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertProduitObjetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
